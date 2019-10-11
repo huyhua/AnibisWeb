@@ -1,8 +1,12 @@
-image: "cypress/base:10"
+image: 'cypress/base:10'
 
 before_script:
-- npm install
+ - npm install
 
-cypress:
-script:
-- npm test
+stages:
+ - cypress_test
+
+run_test:
+ stage: cypress_test
+ script:
+ - npm test

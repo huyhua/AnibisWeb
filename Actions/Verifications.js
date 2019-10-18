@@ -8,7 +8,7 @@ var Interface = require('../Interfaces/Interface.js')
 // Check user info
 Cypress.Commands.add('checkUserInfo', (username) => {
   // Navigate to My Profile
-  cy.navigate("Compte d’utilisateur")
+  cy.navigate("Compte d’utilisateur", { timeout: 90000 })
   // Check if username displays
   cy.get('.block').find('strong').first().should('contain', username)
 })

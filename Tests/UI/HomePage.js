@@ -5,7 +5,7 @@ describe('UI01 - Home Page', function() {
   it('Verify home page follows mockup', function() {
     cy.visit('stage.anibis.ch', { timeout: 90000 })
 
-    //Start the test
+    /**Start the test
     cy.eyesOpen({
       appName: 'anibis',
       testName: 'Verify home page follows mockup',
@@ -18,4 +18,5 @@ describe('UI01 - Home Page', function() {
     //End Test
     cy.eyesClose();
   })
+  */
 })

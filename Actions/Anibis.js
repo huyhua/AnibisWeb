@@ -31,5 +31,5 @@ Cypress.Commands.add('logout', () => {
   cy.visit("/member/default.aspx", { timeout: 90000 })
 
   // Click logout link
-  cy.get(Interface.Header.lnkLogout).click({ position: 'top' })
+  cy.contains('Se déconnecter').click()
 })

@@ -3,7 +3,7 @@ describe('UI01 - Home Page', function() {
   * TESTCASES
   */
   it('Verify home page follows mockup', function() {
-    cy.visit('stage.anibis.ch')
+    cy.visit('stage.anibis.ch', { timeout: 90000 })
 
     //Start the test
     cy.eyesOpen({

@@ -16,7 +16,7 @@ Cypress.Commands.add('navigate', (path) => {
 // Login to anibis with specific email and password
 Cypress.Commands.add('login', (email, password) => {
   // Navigate to login screen by using business action 'navigate'
-  cy.navigate("Se connecter")
+  cy.navigate("Se connecter", { timeout: 90000 })
 
   // Input email and password
   cy.get(Interface.Login.txtEmail).type(email)
@@ -28,7 +28,7 @@ Cypress.Commands.add('login', (email, password) => {
 // Logout
 Cypress.Commands.add('logout', () => {
   // Navigate to login screen by using business action 'navigate'
-  cy.visit("/member/default.aspx")
+  cy.visit("/member/default.aspx", { timeout: 90000 })
 
   // Click logout link
   cy.get(Interface.Header.lnkLogout).click({ position: 'top' })

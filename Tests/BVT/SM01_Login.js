@@ -5,7 +5,7 @@ describe('SM01 - Login', function() {
   */
   before(function () {
     // Launch anibis
-    cy.visit("/",90000)
+    cy.visit("/", { timeout: 90000 })
     Cypress.on('uncaught:exception', (err, runnable) => {
       return false
     })

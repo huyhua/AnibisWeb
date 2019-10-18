@@ -6,6 +6,9 @@ describe('SM01 - Login', function() {
   before(function () {
     // Launch anibis
     cy.visit("/")
+    Cypress.on('uncaught:exception', (err, runnable) => {
+      return false
+    })
 
     // Get dataset
     cy.fixture('accounts.json').as('accounts')

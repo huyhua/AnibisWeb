@@ -20,6 +20,8 @@ describe('SM01 - Login', function() {
       cy.login(account.email, account.password)
 
 
+
+
       // VP: username displays on my profile page
       cy.checkUserInfo(account.username)
 

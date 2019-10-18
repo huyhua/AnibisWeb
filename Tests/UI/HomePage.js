@@ -17,6 +17,6 @@ describe('UI01 - Home Page', function() {
 
     //End Test
     cy.eyesClose();
+    */
   })
-  */
 })

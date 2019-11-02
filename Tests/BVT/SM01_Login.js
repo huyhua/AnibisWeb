@@ -15,14 +15,19 @@ describe('SM01 - Login', function() {
   * TESTCASES
   */
   it('Verify user can login successful with valid account', function() {
-    this.accounts.forEach((account) => {
-      // Login with valid account
-      cy.login(account.email, account.password)
-
-      // VP: username displays on my profile page
-      cy.checkUserInfo(account.username)
-
-      cy.logout()
+//     this.accounts.forEach((account) => {
+//       // Login with valid account
+//       cy.login(account.email, account.password)
+//
+//       // VP: username displays on my profile page
+//       cy.checkUserInfo(account.username)
+// // abcjsjkd
+// Different version
+cy.login(account.email,account.password)
+//Testing
+cy.visit("/")
+cy.visit("/")
+//       cy.logout()
     })
   })
 })
